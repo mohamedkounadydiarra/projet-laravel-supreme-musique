@@ -1,0 +1,22 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Song extends Model
+{
+    use HasFactory;
+    protected $fillable = ['title','description','price','duration','album_id'];
+
+    public function order()
+    {
+        return $this->hasMany(Order::class);
+    }
+
+    public function album()
+    {
+        return $this->belongsTo(Album::class);
+    }
+}

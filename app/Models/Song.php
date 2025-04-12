@@ -10,10 +10,10 @@ class Song extends Model
     use HasFactory;
     protected $fillable = ['title','description','price','duration','album_id'];
 
-    public function order()
-    {
-        return $this->hasMany(Order::class);
-    }
+    // public function order()
+    // {
+    //     return $this->hasMany(Order::class);
+    // }
 
     public function album()
     {

@@ -15,4 +15,9 @@ class OrderItem extends Model
         return $this->belongsTo(Order::class);
     }
 
+    public function item()
+    {
+        return $this->morphTo();
+    }
+
 }

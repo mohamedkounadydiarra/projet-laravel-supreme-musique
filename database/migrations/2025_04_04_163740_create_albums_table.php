@@ -17,7 +17,6 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->string('artist');
             $table->decimal('price');
-            $table->string('cover_image')->nullable();
             $table->timestamps();
         });
     }

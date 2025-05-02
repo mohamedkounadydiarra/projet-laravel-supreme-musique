@@ -17,7 +17,11 @@ class AlbumFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'title'=> fake()->unique()->jobTitle(),
+            'description' =>fake()->paragraph(3),
+            'artist' => fake()->name(),
+            'price' => fake()->numberBetween(1,100),
+           
         ];
     }
 }
